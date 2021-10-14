@@ -1,0 +1,580 @@
+
+* {box-sizing: border-box;}
+html {
+scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(200.37deg, #141514 77.54%, #208A4E 113.2%);
+}
+a{
+  text-decoration: none;
+}
+#navbar {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  background: #2E2D33;
+  text-align: center;
+}
+#navbar-kon {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  text-align: center;
+}
+#navbar a, #navbar-kon a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FBFBFB;
+  transition: color 0.5s;
+  padding: 28px 30px;
+}
+
+#navbar a:hover, #navbar-kon a:hover {
+  color: #46DD85;
+}
+
+.what{
+  margin: 170px 0 0;;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.members1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0 70px;
+}
+.zagolovok{
+  font-family: 'Jost', sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #FBFBFB;
+  text-align: left;
+  padding: 0 0 30px 0;
+}
+.block{
+  display: inline-block;
+}
+.zagolovok-who{
+  font-family: 'Jost', sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #FBFBFB;
+  padding: 73px 0 30px 0;
+}
+.opis-mero{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FBFBFB;
+  margin: 0;
+  display: inline-block;
+  max-width: 624px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  padding: 0;
+}
+.opis-who{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FBFBFB;
+  margin: 0;
+  display: inline-block;
+  max-width: 640px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  padding: 0 0 60px;
+}
+.logic{
+  margin: 0;
+  width: 470px;
+  height: 186px;
+}
+.iw-modal-btn{
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: #8F8F8F;
+  color: #2E2D33;
+  text-decoration: none;
+  padding: 12px 11px 12px 20px;
+  transition: background-color 0.5s;
+  max-height: 48px;
+}
+.iw-modal-btn:hover{
+  background-color: #46DD85;
+
+}
+.iw-modal-btn:focus{
+  background-color: #46DD85;
+    box-shadow: 0px 4px 20px #46DD85;
+}
+.strelka{
+padding: 7px 0 0 4px;
+}
+/*CSS-свойства для заднего фона модального окна*/
+.iw-modal {
+	opacity: 0; /*изначально этот блок должен быть прозрачным*/
+	background: rgba(0,0,0,0.7); /*задаём цвет фона*/
+	pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+ 	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+	transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.iw-modal:target {
+    opacity: 1; /*при клике окно становится видимым*/
+	pointer-events: auto; /*теперь по окну можно кликать мышкой*/
+  overflow-y: auto;   /*прокрутка по вертикли страницы*/
+}
+
+.iw-modal-wrapper {
+	margin:auto; /*выравниваем окно по центру по горизонтали*/
+	margin-top: 10%; /*отступ сверху можно задавать в px, % или vh*/
+  overflow: auto;
+}
+.iw-modal-wrapper1 {
+	margin:auto; /*выравниваем окно по центру по горизонтали*/
+	margin-top: 20%; /*отступ сверху можно задавать в px, % или vh*/
+  overflow: auto;
+}
+
+/*CSS-свойства для блока, содержащего контент модального окна */
+.iw-CSS-modal-inner {
+    position: relative;
+    background: #141614; /*цвет фона*/
+    border-radius: 4px; /*радиус скругления углов*/
+    padding: 41px 25px 32px;
+}
+.iw-CSS-modal-inner1 {
+    position: relative;
+    background: #141614; /*цвет фона*/
+    background-image: url(img/fonk.png);
+    border-radius: 4px; /*радиус скругления углов*/
+    padding: 41px 25px 32px;
+}
+
+/*CSS-свойства заголовка модального окна */
+.iw-modal-header {
+    padding: 0 0 5px 0;/*внутренний отступ*/
+    border-radius: 4px 4px 0 0;
+	  position:relative;
+}
+.iw-modal-title-1 {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 28px;
+  color: #FBFBFB;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 0 0 11px 0;
+}
+.iw-modal-title-2 {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #FBFBFB;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 0
+}
+
+/*CSS для кнопки закрытия окна*/
+.iw-close {
+    position:absolute;
+	top:-30px; /*отступ сверху*/
+	right:2px; /*отступ справа*/
+    font-size: 40px; /*размер шрифта*/
+    color: #555; /*цвет шрифта*/
+    text-decoration: none;
+}
+
+.iw-close:hover, .iw-close:focus {
+    color: #fff; /*цвет шрифта при наведении*/
+    cursor: pointer;
+}
+
+/*CSS для блока с текстом модального окна*/
+
+.iw-modal-text {
+  padding: 0; /*внутренний отступ*/
+  text-align: left;
+}
+.iw-modal-text1 {
+  padding: 30 0 0; /*внутренний отступ*/
+  text-align: center;
+}
+
+/**MEDIA**/
+@media (min-width: 375px) {
+  .iw-modal-wrapper {
+      max-width: 375px;
+   }
+   .iw-modal-wrapper1 {
+       max-width: 375px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 700px){
+  .iw-modal-wrapper {
+      margin-top: 30%;
+   }
+  .iw-modal-wrapper1 {
+      margin-top: 20%;
+   }
+}
+.form {
+        display: inline-block;
+        padding: 0;
+        letter-spacing: 1px;
+        align-items: center;
+        background-color: #141614;
+        }
+
+.form_button {
+         padding: 12px 96px;
+         border: none;
+         border-radius: 4px;
+         color : #F3F3F3;
+         background-color: #8F8F8F;
+         outline: none;
+         cursor: pointer;
+         transition: 0.3s;
+         margin: auto;
+         height: 44px;
+         margin-top: 42px;
+         width: 325px;
+         font-weight: 600;
+         font-size: 14px;
+         line-height: 20px;
+        font-family: 'Jost', sans-serif;
+        font-style: normal;
+ }
+ .form_button1 {
+          padding: 12px 117px;
+          border: none;
+          border-radius: 4px;
+          color : #F3F3F3;
+          background-color: #8F8F8F;
+          outline: none;
+          cursor: pointer;
+          transition: 0.3s;
+          margin: auto;
+          height: 44px;
+          margin-top: 42px;
+          width: 325px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+         font-family: 'Jost', sans-serif;
+         font-style: normal;
+  }
+
+ .form_title {
+          text-align: center;
+          margin: 20px 40px 62px;
+          font-weight: normal;
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 50px;
+          line-height: 60px;
+  }
+
+  .form_grup, .form_grup2{
+        position: relative;
+        background-color: #141614;
+        text-align: center;
+        margin: 40px 0 0;
+}
+.form_grup2{
+  margin: 30px 0 0;
+}
+
+.form_button:hover, .form_button1:hover{
+        background-color:#45DE85;
+        color: #2E2D33;
+}
+.form_button:focus, .form_button1:focus{
+  background-color:#45DE85;
+  box-shadow: 0px 4px 11px #46DD85;
+  color: #2E2D33;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  height: 44px;
+  outline: 0;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #2E2D33;
+  color: #fff;
+  width: 325px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Jost', sans-serif;
+  font-style: italic;
+}
+ label {
+   position:absolute;
+   bottom:42px;
+   pointer-events:none;
+   white-space:nowrap;
+   max-width:100%;
+   overflow:hidden;
+   text-overflow:ellipsis;
+   color: #fff;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+ }
+
+.who{
+  margin: 120px 0 0;
+  background: #232523;
+}
+.center{
+  text-align: center;
+}
+.zelen{
+  font-family: 'Jost', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0px;
+color: #46DD85;
+text-decoration: none;
+margin: 0 0 20px;
+}
+.zelen1{
+  font-family: 'Jost', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0px;
+color: #46DD85;
+text-decoration: none;
+margin: 0 0 20px;
+text-align: left;
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 73px;
+  flex-wrap: wrap;
+}
+.members3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 0;
+}
+.member {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 266px;
+  height: 224px;
+  box-sizing: border-box;
+}
+.member-name{
+    margin: 0;
+}
+.member-role{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #FBFBFB;
+  margin: 30px 0 0;
+  transition: color 0.2s ease-in;
+}
+.member-role:hover{
+  color: #45DE85;
+}
+
+.history{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #8F8F8F;
+  margin: 10px 0 0;
+  text-align: left;
+}
+.history-where{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #8F8F8F;
+  margin: 10px 0 0;
+  text-align: left;
+  padding: 0 60px 0 0;
+}
+.history1{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #8F8F8F;
+  margin: 10px 0 0;
+  padding: 0 0 30px;
+  text-align: left;
+}
+.where{
+  background: #232523;
+  margin: 170px 0 0;
+}
+.members2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: auto;
+}
+.members4 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0;
+  margin: auto;
+}
+.zagolovok-where{
+  font-family: 'Jost', sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #FBFBFB;
+  text-align: left;
+  padding: 90px 100px 0 0;
+}
+.when{
+  font-family: 'Jost', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: 0px;
+text-align: left;
+color: #46DD85;
+padding: 60px 0 0;
+}
+.media{
+  margin: 170px 0 60px;
+}
+.album1{
+  padding: 0 25px 0 0;
+  color: #fff;
+  transition: color 0.2s ease-in;
+  display: inline-block;
+  text-decoration: none;
+}
+.album2{
+  padding: 0 0 0 25px;
+  color: #fff;
+  transition: color 0.2s ease-in;
+  display: inline-block;
+  text-decoration: none;
+}
+img{
+  border-radius: 10px;
+}
+.konec{
+  background: #2E2D33;
+  padding: 30px 0;
+  display: block;
+  flex-wrap: wrap;
+  height: 124px;
+  margin: 0;
+}
+.history-sleva{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8F8F8F;
+  float: left;
+  flex-basis: 44%;
+  padding: 20px 0  0;
+}
+.history-sprava{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  color: #8F8F8F;
+  float: right;
+  text-align: right;
+  padding: 0;
+  flex-basis: 44%;
+}
